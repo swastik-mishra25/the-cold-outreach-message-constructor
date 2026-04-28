@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutreachBuilder | Premium LinkedIn Constructor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Outreach<span>Builder</span></h1>
+        <p>Craft high-converting LinkedIn messages with precision.</p>
+    </header>
+
+    <main class="container">
+        <section class="panel input-panel">
+            <h2>Configure Message</h2>
+            
+            <div class="form-group">
+                <label for="recruiterName">Recruiter Name</label>
+                <input type="text" id="recruiterName" placeholder="e.g. Jane Doe" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="targetCompany">Target Company</label>
+                <input type="text" id="targetCompany" placeholder="e.g. Acme Corp" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="targetRole">Target Role</label>
+                <input type="text" id="targetRole" placeholder="e.g. Senior Developer" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="keySkills">Key Skills (Comma separated)</label>
+                <input type="text" id="keySkills" placeholder="e.g. JavaScript, Python, AWS" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="messageTone">Message Strategy</label>
+                <select id="messageTone">
+                    <option value="student">Emerging Talent</option>
+                    <option value="direct">Opportunity Inquiry</option>
+                    <option value="value">Value Proposition</option>
+                </select>
+            </div>
+
+            <button id="generateBtn" class="primary-btn">Generate Template</button>
+        </section>
+
+        <section class="panel output-panel">
+            <h2>Generated Output</h2>
+            
+            <div class="textarea-container">
+                <textarea id="outputMessage" readonly placeholder="Your premium message will appear here..."></textarea>
+            </div>
+
+            <button id="copyBtn" class="secondary-btn" disabled>Copy to Clipboard</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

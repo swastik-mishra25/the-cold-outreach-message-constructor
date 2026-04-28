@@ -1,0 +1,192 @@
+/* Base Reset and Variables - Black & Gold Theme */
+:root {
+    --bg-color: #000000; /* Pure Black background */
+    --panel-bg: #111111; /* Extremely dark gray panels */
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --primary-color: #d4af37; /* Metallic Gold */
+    --primary-hover: #f1c40f; /* Brighter Gold on hover */
+    --success-color: #2e7d32;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Garamond', Georgia, serif; /* Classier serif font for premium feel */
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Typography */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #ffffff;
+}
+
+header h1 span {
+    color: var(--primary-color);
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: var(--primary-color); /* Gold titles */
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Subtle gold border */
+}
+
+/* Layout: CSS Grid Split Screen */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Premium Panel Styling */
+.panel {
+    background-color: var(--panel-bg);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.03); /* almost invisible border */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Gold Hover Lift Effect */
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15); /* Gold shadow glow */
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Inputs */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: rgba(255, 255, 255, 0.02); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: all var(--transition-speed) ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Gold focus */
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Premium Buttons */
+button {
+    cursor: pointer;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all var(--transition-speed) ease;
+    width: 100%;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: #000000; /* Black text on Gold button */
+    margin-top: auto;
+    border: 1px solid var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.secondary-btn:hover:not(:disabled) {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.secondary-btn:disabled {
+    border-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+}
+
+.secondary-btn.success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+/* Textarea specifics */
+.textarea-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    flex-grow: 1;
+    resize: none;
+    min-height: 280px;
+    margin-bottom: 1rem;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
