@@ -1,11 +1,11 @@
 /* Base Reset and Variables - Black & Gold Theme */
 :root {
-    --bg-color: #000000; /* Pure Black background */
-    --panel-bg: #111111; /* Extremely dark gray panels */
+    --bg-color: #000000;
+    --panel-bg: #111111;
     --text-main: #e0e0e0;
     --text-muted: #a0a0a0;
     --primary-color: #d4af37; /* Metallic Gold */
-    --primary-hover: #f1c40f; /* Brighter Gold on hover */
+    --primary-hover: #f1c40f; /* Brighter Gold */
     --success-color: #2e7d32;
     --border-radius: 8px;
     --transition-speed: 0.3s;
@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: 'Garamond', Georgia, serif; /* Classier serif font for premium feel */
+    font-family: 'Garamond', Georgia, serif;
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.6;
@@ -52,10 +52,10 @@ header p {
 
 h2 {
     font-size: 1.4rem;
-    color: var(--primary-color); /* Gold titles */
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Subtle gold border */
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 /* Layout: CSS Grid Split Screen */
@@ -73,7 +73,7 @@ h2 {
     background-color: var(--panel-bg);
     padding: 2.5rem;
     border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 255, 255, 0.03); /* almost invisible border */
+    border: 1px solid rgba(255, 255, 255, 0.03);
     display: flex;
     flex-direction: column;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -82,7 +82,7 @@ h2 {
 /* Gold Hover Lift Effect */
 .panel:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15); /* Gold shadow glow */
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
     border-color: rgba(212, 175, 55, 0.3);
 }
 
@@ -137,7 +137,7 @@ button {
 
 .primary-btn {
     background-color: var(--primary-color);
-    color: #000000; /* Black text on Gold button */
+    color: #000000;
     margin-top: auto;
     border: 1px solid var(--primary-color);
 }
