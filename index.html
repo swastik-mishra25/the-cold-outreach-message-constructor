@@ -50,6 +50,11 @@
                 </select>
             </div>
 
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="bulletFormat">
+                <label for="bulletFormat">Format skills as bullet points</label>
+            </div>
+
             <button id="generateBtn" class="primary-btn">Generate Template</button>
         </section>
 
@@ -58,9 +63,21 @@
             
             <div class="textarea-container">
                 <textarea id="outputMessage" readonly placeholder="Your premium message will appear here..."></textarea>
+                <div class="metrics" id="textMetrics">Word Count: 0 | Est. Reading Time: 0s</div>
             </div>
 
-            <button id="copyBtn" class="secondary-btn" disabled>Copy to Clipboard</button>
+            <div class="action-row">
+                <button id="copyBtn" class="secondary-btn" disabled>Copy Text</button>
+                <button id="downloadBtn" class="secondary-btn" disabled>Export .TXT</button>
+                <button id="searchBtn" class="secondary-btn" disabled>Find on LinkedIn</button>
+            </div>
+        </section>
+
+        <section class="panel history-panel">
+            <h2>The History Vault</h2>
+            <p class="history-sub">Your recent templates are securely saved in your browser.</p>
+            <div id="historyList" class="history-list">
+                </div>
         </section>
     </main>
 
