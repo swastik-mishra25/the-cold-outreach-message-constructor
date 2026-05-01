@@ -65,10 +65,23 @@ h2 {
 .history-panel { grid-column: 1 / -1; }
 .history-sub { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; margin-top: -1rem; }
 
+/* Feedback Section Layout */
+.feedback-row {
+    display: flex;
+    gap: 1.5rem;
+}
+.feedback-row .form-group {
+    flex: 1;
+}
+
 .form-group { margin-bottom: 1.5rem; }
 label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted); font-weight: 600; }
 
-input[type="text"], select, textarea {
+/* Inputs - FIXED TO INCLUDE EMAIL */
+input[type="text"], 
+input[type="email"], 
+select, 
+textarea {
     width: 100%; padding: 0.85rem;
     background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -76,7 +89,10 @@ input[type="text"], select, textarea {
     font-size: 1rem; transition: all var(--transition-speed) ease;
 }
 
-input[type="text"]:focus, select:focus, textarea:focus {
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+select:focus, 
+textarea:focus {
     outline: none; border-color: var(--primary-color);
     background-color: rgba(255, 255, 255, 0.05);
 }
@@ -126,7 +142,9 @@ textarea { flex-grow: 1; resize: none; min-height: 250px; margin-bottom: 0.5rem;
 .history-title { font-weight: bold; color: var(--primary-color); margin-bottom: 0.25rem; font-size: 1.1rem; }
 .history-snippet { font-size: 0.9rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
+/* Responsive Media Queries */
 @media (max-width: 768px) {
     .container { grid-template-columns: 1fr; }
     .action-row { flex-direction: column; }
+    .feedback-row { flex-direction: column; gap: 0; } /* Stacks Name and Email on mobile */
 }
